@@ -1,0 +1,172 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:elevation="16dp"
+    app:cardCornerRadius="5dp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/img_pay"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/creditcard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="16dp"/>
+        <ImageView
+            android:id="@+id/img_visa"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:src="@drawable/visamastercard"
+            app:layout_constraintTop_toBottomOf="@id/img_pay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Card Holder Name"
+            app:hintTextColor="@color/purple_200"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_visa"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <EditText
+                android:id="@+id/name_et_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_background"
+                android:inputType="text"
+                android:padding="8dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/card_number_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Card Number"
+            app:hintTextColor="@color/purple_200"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_pay"
+            >
+            <br.com.sapereaude.maskedEditText.MaskedEditText
+                android:id="@+id/card_number_et_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_background"
+                android:inputType="number"
+                android:maxLength="19"
+                app:mask="#### #### #### ####"
+                android:padding="8dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_number_pay">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/date_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:hint="Expiry Date"
+                android:layout_weight="1"
+                app:hintTextColor="@color/purple_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name_pay"
+                >
+                <br.com.sapereaude.maskedEditText.MaskedEditText
+                    android:id="@+id/date_et_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_background"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    app:mask="##/##"
+                    android:padding="8dp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/vcc_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:hint="VCC"
+            app:hintTextColor="@color/purple_200"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_pay"
+            >
+            <br.com.sapereaude.maskedEditText.MaskedEditText
+                android:id="@+id/vcc_et_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_background"
+                android:inputType="number"
+                android:maxLength="4"
+                app:mask="####"
+                android:padding="8dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout">
+            <Button
+                android:id="@+id/button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="16dp"
+                android:background="@drawable/buttonerror_background"
+                android:text="إلغاء"
+                android:textColor="@color/white"
+                android:fontFamily="@font/cairo_extralight"
+                android:textStyle="bold"
+                android:textSize="22sp"/>
+            <Button
+                android:id="@+id/button_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="16dp"
+                android:background="@drawable/buttonpay_background"
+                android:text="دفع"
+                android:textColor="@color/white"
+                android:fontFamily="@font/cairo_extralight"
+                android:textStyle="bold"
+                android:textSize="22sp"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

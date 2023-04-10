@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="الرئيسية" />
+
+        <item
+            android:id="@+id/nav_mydata"
+            android:title="بياناتي"
+            android:icon="@drawable/ic_user"/>
+
+        <item
+            android:id="@+id/nav_follow_request"
+            android:title="تتبع الطلب"
+            android:icon="@drawable/ic_checked"/>
+        <item
+            android:id="@+id/nav_last_news"
+            android:title="تواصل معنا"
+            android:icon="@drawable/ic_email"/>
+        <item
+            android:id="@+id/nav_questions"
+            android:title="أسئلة شائعة"
+            android:icon="@drawable/ic_question"/>
+
+        <item
+            android:id="@+id/nav_log_out"
+            android:title="تسجيل الخروج"
+            android:icon="@drawable/ic_logout"/>
+    </group>
+</menu>

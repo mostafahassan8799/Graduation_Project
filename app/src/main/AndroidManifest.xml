@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mostafahassan.graduationproject">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_sphinx"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_sphinx"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GraduationProject">
+        <activity android:name=".loginSignUp.LoginSignUpActivity"></activity>
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/Theme.GraduationProject.NoActionBar"></activity>
+        <activity android:name=".ui.activities.FamilyServiceActivity" />
+        <activity android:name=".ui.activities.WeddingServiceActivity" />
+        <activity android:name=".ui.activities.BirthCertificateActivity" />
+        <activity android:name=".ui.activities.IDCardActivity" />
+        <activity android:name=".ui.activities.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
